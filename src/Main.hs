@@ -17,7 +17,7 @@ convert name = do
   let
     input = chunksOf 4 $ Bi.unpack (i :: Bi.Bitstream Bi.Right)
     out = conv input
-  Bi.writeFile "palAct.bin" (Bi.pack out :: Bi.Bitstream Bi.Right)
+  Bi.writeFile "pal.act" (Bi.pack out :: Bi.Bitstream Bi.Right)
 
 conv :: [[Bool]] -> [Bool]
 conv [] = []
